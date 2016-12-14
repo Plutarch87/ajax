@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax</title>
+	<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="ajax.js"></script>
+</head>
+<body>
+	<h1>AJAX / JQuery</h1>
+	<hr>
+	<p><button id="index" onclick="getContent('index');">Index</button>&nbsp;|&nbsp;<button id="about" onclick="getContent('about');">About</button>&nbsp;|&nbsp;<button id="contact" onclick='getContent("contact")'>Contact</button></p>
+	<table>
+		<tr>
+			<td>
+				<textarea id="index-field" rows="16" cols="64" placeholder="Index" style="color: red"></textarea>
+			</td>
+			<td>
+				<textarea id="about-field" rows="16" cols="64" placeholder="About" style="color: red"></textarea>
+			</td>
+			<td>
+				<textarea id="contact-field" rows="16" cols="64" placeholder="Contact" style="color: red"></textarea>
+			</td>
+		</tr>
+	</table>
+	<p><button id="count" onclick="countItems();">Click</button>&nbsp;|&nbsp;<span id="counted"></span></p>
+	<hr>
+	<div>
+		<table>
+			<th><span id="total" hidden="true">Total: <span id="sumtotal"></span></span></th>
+			<th></th>
+			<th style="font-family: sans-serif;">
+				Korpa
+			</th>
+			<tr>
+				<td>					
+					<div style="border: 1px solid black; width: 180px; height: 200px; max-height: 200px; overflow-y: scroll;">	
+						<ul id="counter">
+							
+						</ul>
+					</div>		
+					
+				</td>
+				<td style="width:50px;">
+					
+				</td>				
+				<td>
+					<div style="border: 1px solid black; width: 360px; height: 150px; max-height: 200px; overflow-y: scroll;">
+						<ul id="cart">
+							
+						</ul>						
+					</div>
+				</td>
+			</tr>
+		</table>	
+	</div>
+	<hr>
+	<button id="chkout" onclick="checkout();">Checkout</button>
+</body>
+</html>
